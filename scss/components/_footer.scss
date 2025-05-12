@@ -1,0 +1,47 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.footer {
+	padding-block: 50px;
+	background-color: $black;
+	color: $white;
+	font-weight: 500;
+	& img {
+		width: 100px;
+		height: fit-content;
+	}
+	& svg {
+		fill: $white;
+	}
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		@include mq(md) {
+			gap: 50px;
+		}
+		& > div {
+			display: flex;
+			max-width: 350px;
+			width: 100%;
+			justify-content: space-between;
+			& ul {
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+			}
+		}
+	}
+	&__social {
+		display: flex;
+		gap: 20px;
+		@include mq(md) {
+			gap: 40px;
+		}
+	}
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+	}
+}

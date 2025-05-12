@@ -1,0 +1,81 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.contact {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr;
+	padding-block: 50px;
+	gap: 70px;
+	@include mq(xl) {
+		grid-template-columns: auto 1fr;
+	}
+	& img {
+		display: none;
+		@include mq(xl) {
+			display: block;
+		}
+	}
+	& > div {
+		max-width: 800px;
+		margin-inline: auto;
+		padding-inline: 20px;
+		@include mq(xl) {
+			padding-inline: 0;
+			margin-right: 36px;
+		}
+	}
+	& p {
+		margin-bottom: 20px;
+		text-wrap: balance;
+	}
+	&__social {
+		margin-bottom: 25px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		flex-wrap: wrap;
+		@include mq(xl) {
+			gap: 90px;
+		}
+		& a {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			color: $green;
+			font-weight: 700;
+		}
+	}
+	& label {
+		font-weight: 700;
+		display: flex;
+		flex-direction: column;
+		gap: 11px;
+	}
+	& form {
+		display: flex;
+		flex-direction: column;
+		gap: 17px;
+		max-width: 100%;
+		@include mq(xl) {
+			max-width: 500px;
+		}
+	}
+	& input,
+	textarea {
+		background-color: $gray;
+		border-radius: 6px;
+		padding: 15px;
+	}
+	& input {
+		height: 40px;
+	}
+	& textarea {
+		min-height: 130px;
+		width: 100%;
+		resize: vertical;
+	}
+	& button {
+		padding: 9px 80px;
+	}
+}

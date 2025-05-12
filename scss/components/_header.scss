@@ -1,0 +1,43 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.header {
+	padding-block: 40px;
+	&__items {
+		display: flex;
+		align-items: center;
+		gap: 80px;
+		@include mq(xl) {
+			gap: 15%;
+		}
+
+		& .header__item-2 {
+			display: flex;
+			flex: 1;
+		}
+		& nav {
+			width: 100%;
+		}
+	}
+	&__nav {
+		display: none;
+		flex: 1;
+		justify-content: space-between;
+		gap: 10px;
+		@include mq(lg) {
+			display: flex;
+		}
+	}
+	&__logo {
+		width: 100px;
+	}
+	&__social {
+		display: flex;
+		gap: 40px;
+		&__icon {
+			width: 100%;
+			max-width: 30px;
+			max-height: 30px;
+		}
+	}
+}

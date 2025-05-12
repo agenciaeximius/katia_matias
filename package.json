@@ -1,0 +1,11 @@
+{
+	"scripts": {
+		"start": "sass -w --no-source-map scss/style.scss style.css -s compressed"
+	},
+	"devDependencies": {
+		"sass": "^1.87.0"
+	},
+	"dependencies": {
+		"inputmask": "^5.0.9"
+	}
+}

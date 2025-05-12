@@ -1,0 +1,42 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.title {
+	font-family: $title-font-family, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: rem(36px);
+	color: $green;
+	text-wrap: balance;
+	margin-bottom: 30px;
+	@include mq(sm) {
+		font-size: rem(48px);
+	}
+}
+
+.highlight {
+	background: linear-gradient(90deg, #747711 0%, #c4b257 50%, #7c801a 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+p,
+h2,
+h3,
+h4,
+li,
+a {
+	font-family: $default-font-family, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: rem(16px);
+}
+
+b {
+	font-weight: 700;
+}
+
+i {
+	font-style: italic;
+}

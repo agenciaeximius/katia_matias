@@ -1,0 +1,79 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.hero {
+	&__img-wrapper {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100vw;
+			width: calc(100vw + 95%);
+			height: 100%;
+			background-image: url('../../assets/pattern.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			z-index: -1;
+			@include mq(xxl) {
+				height: calc(100% + 50px);
+			}
+		}
+	}
+	& img {
+		max-width: 666px;
+		width: 100%;
+		height: auto;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 2rem;
+		@include mq(xxl) {
+			flex-direction: row;
+			text-align: left;
+			margin-bottom: 0;
+		}
+		&__text {
+			max-width: 1000px;
+		}
+	}
+	&__tag {
+		background-color: $gray;
+		border-radius: 6px;
+		padding: 10px 30px;
+		display: inline-block;
+	}
+	&__title {
+		margin-bottom: 13px;
+		max-width: 100%;
+		@include mq(xxl) {
+			max-width: 17ch;
+			margin-right: 36px;
+		}
+	}
+	& p {
+		margin-bottom: 21px;
+		margin-inline: auto;
+		text-wrap: balance;
+		@include mq(xxl) {
+			max-width: 50ch;
+			margin-inline: 0;
+		}
+	}
+	& a {
+		padding: 9px 37px;
+		margin-inline: auto;
+		@include mq(xxl) {
+			margin-inline: 0;
+		}
+	}
+}

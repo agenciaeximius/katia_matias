@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+.button {
+	display: block;
+	width: fit-content;
+	background-color: $green;
+	color: $white;
+	border-radius: 6px;
+}

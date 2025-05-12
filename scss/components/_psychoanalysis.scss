@@ -1,0 +1,24 @@
+@use '../utilities/' as *;
+
+.psychoanalysis {
+	padding-block: 80px;
+	display: grid;
+	grid-template-columns: 1fr;
+	@include mq(lg) {
+		grid-template-columns: 1fr 500px;
+	}
+	& ul {
+		margin-top: 21px;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+	& li {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+	& li::before {
+		content: url(../../assets/check.svg);
+	}
+}
