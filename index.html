@@ -199,11 +199,11 @@
 					</li>
 				</ul>
 
-				<form action="">
-					<label for="contact-name">Seu nome: <input type="text" id="contact-name" /></label>
-					<label for="contact-phone">Seu telefone (WhatsApp): <input type="tel" id="contact-phone" /></label>
+				<form action="" id="contact-form">
+					<label for="contact-name">Seu nome: <input type="text" id="contact-name" required /></label>
+					<label for="contact-phone">Seu telefone (WhatsApp): <input type="tel" id="contact-phone" required /></label>
 					<label for="contact-email">Seu e-mail: <input type="email" id="contact-email" /></label>
-					<label for="contact-message">Escreva sua mensagem: <textarea id="contact-message"></textarea></label>
+					<label for="contact-message">Escreva sua mensagem: <textarea id="contact-message" required></textarea></label>
 					<button type="submit" class="button">Enviar</button>
 				</form>
 			</div>
