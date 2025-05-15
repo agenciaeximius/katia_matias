@@ -6,7 +6,10 @@
 	&__items {
 		display: flex;
 		align-items: center;
-		gap: 80px;
+		gap: 40px;
+		@include mq(lg) {
+			gap: 80px;
+		}
 		@include mq(xl) {
 			gap: 15%;
 		}

@@ -1,5 +1,6 @@
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
+@use 'sass:color';
 
 .button {
 	display: block;
@@ -7,4 +8,8 @@
 	background-color: $green;
 	color: $white;
 	border-radius: 6px;
+	transition: background-color 0.2s;
+	&:hover {
+		background-color: color.adjust($green, $lightness: -10%);
+	}
 }

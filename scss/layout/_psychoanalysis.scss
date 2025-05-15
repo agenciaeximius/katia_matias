@@ -1,11 +1,14 @@
 @use '../utilities/' as *;
 
 .psychoanalysis {
-	padding-block: 80px;
+	padding-block: 55px;
 	display: grid;
 	grid-template-columns: 1fr;
 	@include mq(lg) {
 		grid-template-columns: 1fr 500px;
+	}
+	@include mq(xxl) {
+		padding-block: 80px;
 	}
 	& ul {
 		margin-top: 21px;

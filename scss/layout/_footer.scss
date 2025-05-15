@@ -25,6 +25,8 @@
 			max-width: 350px;
 			width: 100%;
 			justify-content: space-between;
+			gap: 40px 70px;
+			flex-wrap: wrap;
 			& ul {
 				display: flex;
 				flex-direction: column;
@@ -35,6 +37,8 @@
 	&__social {
 		display: flex;
 		gap: 20px;
+		height: 58px;
+		align-items: center;
 		@include mq(md) {
 			gap: 40px;
 		}
@@ -42,6 +46,7 @@
 	&__info {
 		display: flex;
 		justify-content: space-between;
-		gap: 15px;
+		gap: 10px;
+		flex-wrap: wrap;
 	}
 }

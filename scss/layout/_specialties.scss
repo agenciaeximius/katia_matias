@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
 
-.especialidades {
+.specialties {
 	position: relative;
 	z-index: 10;
 	background-color: $gray;
@@ -10,6 +10,10 @@
 	padding: 25px 60px 15px 60px;
 	justify-content: space-between;
 	gap: 60px;
+
+	@media only screen and (max-width: 1200px) {
+		max-width: 100% !important;
+	}
 	@include mq(xl) {
 		padding: 65px 150px 50px 150px;
 	}
