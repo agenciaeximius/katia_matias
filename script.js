@@ -14,22 +14,13 @@ applyPhoneMask();
 function formWhatsappRedirect(formID) {
 	const form = document.querySelector(formID);
 
-	const name = form.querySelector('#contact-name');
-	const phone = form.querySelector('#contact-phone');
-	const email = form.querySelector('#contact-email');
-	const message = form.querySelector('#contact-message');
-
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
-		const text = `Olá Katia, meu nome é ${name.value} e tenho a seguinte mensagem:
-${message.value}
-Minhas informações de contato são:
-${email.value ? `E-mail: ${email.value}` : ''}
-Telefone: ${phone.value}`;
+		const text = `Olá Katia, meu nome é ${e.target[0].value} e tenho a seguinte mensagem:\n${e.target[3].value}\nMinhas informações de contato são:\n${
+			e.target[2].value ? `E-mail: ${e.target[2].value}` : ''
+		}\nTelefone: ${e.target[1].value}`;
 
-		let encodedText = encodeURIComponent(text);
-
-		window.open(`http://wa.me/5511970472678?text=${encodedText}`, '_blank');
+		window.open(`http://wa.me/5511970472678?text=${encodeURIComponent(text)}`, '_blank');
 	});
 }
 
